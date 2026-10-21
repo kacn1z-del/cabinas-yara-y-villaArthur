@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabinas Yara y Villa Arthur | La Fortuna, San Carlos</title>
+  <meta name="description" content="Alquiler de cabinas Yara y Casa Villa Arthur en La Fortuna de San Carlos, Alajuela. Cerca del Volcán Arenal y las cataratas." />
+  <meta name="theme-color" content="#1c1410" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --char-950: #1c1410;
+      --char-900: #241b14;
+      --ember-700: #a8331f;
+      --ember-500: #c9502e;
+      --gold-400: #c9962f;
+      --gold-200: #e3c481;
+      --cream-050: #fbf6ec;
+      --cream-100: #f4ecda;
+      --line: rgba(46, 33, 23, 0.16);
+      --line-strong: rgba(46, 33, 23, 0.28);
+      --ink-900: #2e2117;
+      --ink-600: #6b5843;
+      --ink-400: #93816b;
+      --whatsapp: #25d366;
+      --whatsapp-dark: #1da851;
+      --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+      --font-serif: 'Lora', Georgia, serif;
+      --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink-900);
+      background: var(--cream-050);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    p { margin: 0; }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    :focus-visible {
+      outline: 2px solid var(--ember-700);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(28, 20, 16, 0.7) 0%, rgba(28, 20, 16, 0.92) 100%),
+        url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1600') center/cover no-repeat;
+      background-color: var(--char-950);
+      color: var(--cream-100);
+      padding: 56px 24px 52px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% -10%, rgba(201, 80, 46, 0.35), transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero__inner { position: relative; }
+
+    .hero__logo {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      border: 3px solid var(--gold-400);
+      background: var(--char-900);
+      color: var(--gold-200);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.02em;
+    }
+
+    .hero__eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-200);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero__title {
+      font-size: clamp(2.1rem, 7vw, 2.9rem);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .hero__sub {
+      margin: 14px auto 0;
+      max-width: 520px;
+      font-size: 14px;
+      color: rgba(251, 246, 236, 0.75);
+    }
+
+    .hero__hours {
+      margin-top: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold-200);
+    }
+
+    .hero__actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    /* ========== BARRA PEGAJOSA ========== */
+    .bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      background: var(--char-950);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .bar__brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .bar__logo {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      border: 1.5px solid var(--gold-400);
+      color: var(--gold-200);
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bar__name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--cream-100);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .bar__actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .bar__btn {
+      background: transparent;
+      border: 1px solid var(--gold-400);
+      color: var(--gold-400);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .bar__wa {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* ========== CONTENEDOR ========== */
+    .app-main {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 18px 60px;
+    }
+
+    .section {
+      padding-top: 44px;
+      scroll-margin-top: 80px;
+    }
+
+    /* Listón tipo banner del menú */
+    .ribbon {
+      position: relative;
+      display: inline-block;
+      background: var(--ember-700);
+      color: var(--cream-050);
+      padding: 8px 22px;
+      margin-bottom: 12px;
+      border-radius: 3px 14px 3px 14px;
+    }
+
+    .ribbon::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      background: var(--char-950);
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+
+    .ribbon h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--cream-050);
+    }
+
+    .section__intro {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--ink-600);
+      font-size: 14px;
+      margin-bottom: 20px;
+      max-width: 620px;
+    }
+
+    /* ========== ALOJAMIENTOS ========== */
+    .grid-alojamientos {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--cream-100);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card__img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .card__body {
+      padding: 20px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .card__title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--char-950);
+    }
+
+    .card__desc {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 14px;
+      color: var(--ink-600);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chip {
+      background: var(--cream-050);
+      border: 1px solid var(--line-strong);
+      color: var(--ink-900);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 999px;
+    }
+
+    .card__price {
+      margin-top: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ember-700);
+    }
+
+    .card__price strong {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--ember-700);
+    }
+
+    .card__actions {
+      margin-top: auto;
+      padding-top: 8px;
+    }
+
+    .btn-wa {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--whatsapp);
+      color: #fff;
+      padding: 13px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .btn-wa:hover { background: var(--whatsapp-dark); }
+
+    .btn-outline {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: transparent;
+      color: var(--ember-700);
+      border: 1.5px solid var(--ember-700);
+      padding: 11px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .btn-outline:active { background: var(--ember-700); color: var(--cream-100); }
+
+    /* ========== ATRACCIONES ========== */
+    .atracciones {
+      background: var(--char-950);
+      color: var(--cream-100);
+      margin-top: 44px;
+      padding: 40px 0 44px;
+    }
+
+    .atracciones .app-main { padding-bottom: 0; }
+
+    .atracciones .ribbon h2 { color: var(--cream-050); }
+
+    .atracciones .section__intro { color: rgba(251, 246, 236, 0.7); }
+
+    .grid-atracciones {
+      display: grid;
+      gap: 12px;
+    }
+
+    .atraccion {
+      background: var(--char-900);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 20px 20px;
+    }
+
+    .atraccion__icon {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .atraccion h3 {
+      font-size: 17px;
+      color: var(--gold-200);
+      margin-bottom: 6px;
+    }
+
+    .atraccion p {
+      font-size: 14px;
+      color: rgba(251, 246, 236, 0.78);
+    }
+
+    /* ========== GALERÍA ========== */
+    .galeria {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+    }
+
+    .galeria img:first-child {
+      grid-column: span 2;
+      height: 220px;
+    }
+
+    /* ========== CONTACTO ========== */
+    .contacto-card {
+      background: var(--cream-100);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 26px 22px;
+      text-align: center;
+    }
+
+    .contacto-card p.texto {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--ink-600);
+      margin: 0 auto 20px;
+      max-width: 520px;
+    }
+
+    .contacto-botones {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+
+    .btn-llamar {
+      display: block;
+      background: var(--ember-700);
+      color: var(--cream-050);
+      padding: 13px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .btn-llamar:hover { background: #8a2a19; }
+
+    .contacto-datos {
+      margin-top: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--ink-600);
+    }
+
+    .contacto-datos a {
+      color: var(--ember-700);
+      font-weight: 600;
+    }
+
+    /* ========== RESERVA FLOTANTE (solo móvil) ========== */
+    .flotante-wa {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 15;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--char-950);
+      color: rgba(251, 246, 236, 0.7);
+      text-align: center;
+      padding: 26px 20px 90px;
+      font-size: 13px;
+    }
+
+    footer strong {
+      font-family: var(--font-display);
+      color: var(--gold-200);
+      font-size: 15px;
+    }
+
+    footer a {
+      color: var(--gold-200);
+    }
+
+    footer p + p { margin-top: 6px; }
+
+    /* ========== ESCRITORIO ========== */
+    @media (min-width: 720px) {
+      .hero { padding: 72px 24px 64px; }
+      .hero__title { font-size: 3.4rem; }
+
+      .grid-alojamientos { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .card__img { height: 250px; }
+
+      .grid-atracciones { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+      .galeria { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .galeria img { height: 200px; }
+      .galeria img:first-child { grid-column: span 2; height: 200px; }
+
+      .flotante-wa { display: none; }
+      footer { padding-bottom: 26px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0.001ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__inner">
+      <div class="hero__logo" aria-hidden="true">CY</div>
+      <p class="hero__eyebrow">La Fortuna de San Carlos · Alajuela</p>
+      <h1 class="hero__title">Cabinas Yara &amp; Villa Arthur</h1>
+      <p class="hero__sub">Descanse entre la naturaleza, con vista al Volcán Arenal y a pocos minutos de las cataratas y las aguas termales.</p>
+      <p class="hero__hours">Check-in [hora] · Check-out [hora]</p>
+      <div class="hero__actions">
+        <a href="#alojamientos" class="bar__btn">Ver alojamientos</a>
+        <a href="#reservar" class="bar__btn">📅 Reservar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA PEGAJOSA -->
+  <header class="bar">
+    <div class="bar__brand">
+      <div class="bar__logo" aria-hidden="true">CY</div>
+      <span class="bar__name">Cabinas Yara &amp; Villa Arthur</span>
+    </div>
+    <div class="bar__actions">
+      <a href="#reservar" class="bar__btn">📅 Reservar</a>
+      <a href="https://wa.me/506[NUMERO]?text=Hola,%20quiero%20consultar%20disponibilidad" class="bar__wa" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">💬</a>
+    </div>
+  </header>
+
+  <main class="app-main">
+
+    <!-- ALOJAMIENTOS -->
+    <section class="section" id="alojamientos">
+      <div class="ribbon"><h2>Alojamientos</h2></div>
+      <p class="section__intro">Escoja entre nuestras cabinas independientes o la casa completa para su grupo.</p>
+
+      <div class="grid-alojamientos">
+
+        <article class="card">
+          <img class="card__img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900" alt="Cabina Yara en La Fortuna" loading="lazy" />
+          <div class="card__body">
+            <h3 class="card__title">Cabinas Yara</h3>
+            <p class="card__desc">Dos cabinas independientes, cómodas y acogedoras, ideales para parejas o viajeros que buscan descanso sencillo rodeados de naturaleza.</p>
+            <div class="chips">
+              <span class="chip">2 cabinas</span>
+              <span class="chip">Wi-Fi</span>
+              <span class="chip">Estacionamiento</span>
+              <span class="chip">[Otra amenidad]</span>
+            </div>
+            <p class="card__price">Desde <strong>₡[precio]</strong> por noche</p>
+            <div class="card__actions">
+              <a class="btn-wa" target="_blank" rel="noopener" href="https://wa.me/506[NUMERO]?text=Hola,%20quiero%20reservar%20una%20Cabina%20Yara">Reservar por WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900" alt="Casa Villa Arthur en La Fortuna" loading="lazy" />
+          <div class="card__body">
+            <h3 class="card__title">Casa Villa Arthur</h3>
+            <p class="card__desc">Casa completa para familias o grupos. Espacio privado y amplio, con todo lo necesario para disfrutar La Fortuna a su ritmo.</p>
+            <div class="chips">
+              <span class="chip">Casa completa</span>
+              <span class="chip">[N] habitaciones</span>
+              <span class="chip">Cocina equipada</span>
+              <span class="chip">[Otra amenidad]</span>
+            </div>
+            <p class="card__price">Desde <strong>₡[precio]</strong> por noche</p>
+            <div class="card__actions">
+              <a class="btn-wa" target="_blank" rel="noopener" href="https://wa.me/506[NUMERO]?text=Hola,%20quiero%20reservar%20la%20Casa%20Villa%20Arthur">Reservar por WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ATRACCIONES -->
+  <section class="atracciones" id="atracciones">
+    <div class="app-main">
+      <div class="ribbon"><h2>Qué hacer en La Fortuna</h2></div>
+      <p class="section__intro">Aventura, naturaleza y relajación a pocos minutos de su alojamiento.</p>
+
+      <div class="grid-atracciones">
+        <div class="atraccion">
+          <div class="atraccion__icon" aria-hidden="true">🌋</div>
+          <h3>Volcán Arenal</h3>
+          <p>Uno de los volcanes más emblemáticos del país, con miradores y senderos a su alrededor.</p>
+        </div>
+        <div class="atraccion">
+          <div class="atraccion__icon" aria-hidden="true">💧</div>
+          <h3>Cataratas de La Fortuna</h3>
+          <p>Un sendero por el bosque lleva hasta una impresionante caída de agua. [Tiempo de caminata aproximado].</p>
+        </div>
+        <div class="atraccion">
+          <div class="atraccion__icon" aria-hidden="true">♨️</div>
+          <h3>Aguas termales</h3>
+          <p>Relájese en pozas de aguas termales naturales al pie del volcán.</p>
+        </div>
+        <div class="atraccion">
+          <div class="atraccion__icon" aria-hidden="true">🦥</div>
+          <h3>Vida silvestre</h3>
+          <p>Observe perezosos, aves y mariposas en los senderos de la zona.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="app-main">
+
+    <!-- GALERÍA -->
+    <section class="section" id="galeria">
+      <div class="ribbon"><h2>Galería</h2></div>
+      <p class="section__intro">Un vistazo a nuestros espacios y al entorno.</p>
+      <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200" alt="Paisaje de La Fortuna" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800" alt="Interior de cabina" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=800" alt="Terraza con vista" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800" alt="Naturaleza tropical" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- RESERVAR -->
+    <section class="section" id="reservar">
+      <div class="ribbon"><h2>Reserve su estadía</h2></div>
+      <div class="contacto-card">
+        <p class="texto">Escríbanos por WhatsApp para consultar disponibilidad y tarifas. Le respondemos lo antes posible.</p>
+        <div class="contacto-botones">
+          <a class="btn-wa" href="https://wa.me/506[NUMERO]?text=Hola,%20quiero%20consultar%20disponibilidad" target="_blank" rel="noopener">💬 Escribir por WhatsApp</a>
+          <a class="btn-llamar" href="tel:+506[NUMERO]">📞 Llamar</a>
+        </div>
+        <div class="contacto-datos">
+          <span>📍 La Fortuna de San Carlos, Alajuela, Costa Rica</span>
+          <span>✉️ <a href="mailto:[correo@ejemplo.com]">[correo@ejemplo.com]</a></span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Cabinas Yara &amp; Villa Arthur</strong></p>
+    <p>La Fortuna de San Carlos, Alajuela, Costa Rica</p>
+    <p>© 2026 Todos los derechos reservados.</p>
+    <p>Sitio desarrollado por <a href="https://kenychinchilla.com" target="_blank" rel="noopener">KCN</a></p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp (solo móvil) -->
+  <a class="flotante-wa" href="https://wa.me/506[NUMERO]?text=Hola,%20quiero%20consultar%20disponibilidad" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">💬</a>
+
+</body>
+</html>
